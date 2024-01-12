@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="fruit1" placeholder=" enter fruit first">
+    <br>
+    
+    <br><input type="button" id="button" value="click me" onclick="myfunction()">
+
+
+    <p>
+        
+        <span id="mytext"></span>
+    </p>
+
+
+</body>
+</html>
+
+<script>
+    var fruits =[];
+    
+
+    function myfunction(){
+        var fruit1 = document.getElementById("fruit1").value;
+        
+        
+        document.getElementById("fruit1").value = "";
+        
+        fruits.push(fruit1);
+
+        var arr='';
+        console.log(fruits,fruits.length);
+     ///   document.getElementById("mytext").innerHTML = document.getElementById("mytext").innerHTML + '<li>'+fruits+'</li>';
+        fruits.forEach(element => {
+          arr+='<li>'+ element + '</li>'
+        });
+        
+        document.getElementById("mytext").innerHTML = arr;
+    }
+
+</script>

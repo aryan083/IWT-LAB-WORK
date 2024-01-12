@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        Enter  your name :- 
+        <input type="text", id="name", placeholder="Enter your name">
+        <br>
+        <br>
+        Enter your age :-
+        <input type="number", id="age", placeholder="Enter your age">
+        <br>    
+        <br>
+        Enter your Gender :-
+        <input  type="radio" name="gender" id = male>
+        male
+        <input  type="radio" name="gender" id=female>
+        female
+        <br>
+        <br>
+        <input type="button" name="button" id="submit" value="submit" onclick="myfunction()">
+
+</body>
+</html>
+
+<script>
+    var var1 = document.getElementById("name").value;
+    var var2 = document.getElementById("age").value;
+    var var3 = document.getElementsById("gender");
+    var var4 = document.getElementById("submit");
+    function myfunction(){
+        
+        console.log("clicked on the button");
+
+        if(var1=="")
+            alert("please enter your name");
+
+        else if(var2=="")
+            alert("please enter your age");
+        
+        else if(!var3.checked && !var4.checked )
+            alert("please enter your name");
+    
+    }
+
+
+</script>

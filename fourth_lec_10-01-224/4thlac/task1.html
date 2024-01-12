@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv{    
+            align-items: center; 
+        }
+
+        #counter{
+            align-content: center;
+            font-size: 50px;
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+        .buttonsdiv{
+            align-content: center;
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mydiv">
+        <div id="counter" >0</div>
+        <br>
+        <div class="buttonsdiv">
+            <button onclick="increase()">+</button>
+        
+        <button onclick="decrease()">-</button>
+        <button onclick="reset()">reset</button>
+        </div>
+        
+    </div>
+
+  <script>
+    //4 buttons and counter tags on the clikc of + button increase button and on the click of - button decrease the counter and on the reset button reset the counter to 0
+    var counter = 0;
+    function increase(){
+        counter++;
+        document.getElementById('counter').innerHTML = counter;
+    }
+    function decrease(){
+        counter--;
+        document.getElementById('counter').innerHTML = counter;
+    }
+    function reset(){
+        counter = 0;
+        document.getElementById('counter').innerHTML = counter;
+    }
+
+
+
+
+  </script>
+    
+</body>
+</html>

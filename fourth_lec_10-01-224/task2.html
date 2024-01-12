@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+</head>
+    <!-- create a design html page which accepts blog attributes like title ,author ,image, description and display all posted blogs  -->
+
+<body>
+    <form >
+        <fieldset>
+            <legend>HTML form</legend>
+            Title:
+            <input type ="text" id="ttl" name="titlename" placeholder="Enter title" />
+<br><br>
+           Author Name:
+            <input type ="text" id="athr" name="Authorname" placeholder="Enter Author Name" />
+      <br><br>
+            Select Image:
+            <input type="file" id="photo" name="img">
+            <br><br>
+           <textarea name="textarea" id="desc" cols="50" rows="20" placeholder="Enter Description"></textarea>
+           <br><br>
+            <button onclick="addPost()">Generate</button>
+        </fieldset>
+
+    </form>
+    <div id="div">THIS IS A POST</div>
+
+<script>
+    function addPost(){
+        var title=document.getElementById('ttl').value
+        var author = document.getElementById('athr').value
+        var img=document.getElementById('pht')
+        var description=document.getElementById('desc').value
+
+    document.getElementById('ttl').value=''
+       document.getElementById('athr').value=''
+        document.getElementById('pht').value=''
+        =document.getElementById('desc').value=''
+
+        posts.push({title,author,img,description})
+
+        var html=''
+        posts.forEach(post => {
+            html+='<div class="title">'+post.title+'</div>'+'<div class="author">'+post.author+
+                '<img src='+post.img+'alt ="post image'>+post.description+'<div class="description">'
+        });
+
+        document.getElementById('div').innerHTML=html;
+        
+    }
+</script>
+
+</body>
+</html>
+
+<!-- //create a HTML page which accepts blocks attributes like title author imange description and will display all posted blogs -->
+<!-- 
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="maindiv" >title :- 
+        <input type="text" id="title" placeholder="Enter title here">
+        <br>
+        author :-
+        <input type="text" id="author" placeholder="Enter author name here">
+        <br>
+        description :-
+        <input type="text" id="description" placeholder="Enter description here">
+        <br>
+        image :-
+        <input type="text" id="image" placeholder="Enter image url here">
+        <br>
+        <button onclick="createblog()">create blog</button>
+
+
+    </div>
+    
+
+
+
+
+
+
+    <script>
+        //Tutorial 1 make a blog using HTML CSS JAVASCRIPT
+        //create a HTML page which accepts blocks attributes like title author imange description and will display all posted blogs
+        var authorname=document.getElementById('author');
+        var title=document.getElementById('title');
+        var description=document.getElementById('description');
+        var image=document.getElementById('image');
+
+        function createblog(){
+            var maindiv=document.getElementById('maindiv');
+            var div=document.createElement('div');
+            var h1=document.createElement('h1');
+            var h2=document.createElement('h2');
+            var p=document.createElement('p');
+            var img=document.createElement('img');
+            h1.innerHTML=title.value;
+            h2.innerHTML=authorname.value;
+            p.innerHTML=description.value;
+            img.src=image.value;
+            div.appendChild(h1);
+            div.appendChild(h2);
+            div.appendChild(p);
+            div.appendChild(img);
+            maindiv.appendChild(div);
+        
+        }
+
+    </script>
+    
+</body>
+</html>-->

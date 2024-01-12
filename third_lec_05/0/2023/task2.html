@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .evendiv{
+            background-color: aqua;
+            margin:auto;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+
+
+        }
+        .odddiv{
+            background-color: yellow;
+            margin:auto;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+        <label>Enter the number of divs you want</label>
+        <input type="text" id="myinput" placeholder="enter the number of divs here" />
+
+        <input type="button" id ="button" value="click me" onclick="onclick()" />
+        <div id="mydiv">
+            
+        </div>
+
+        <script>
+        function onclick(){
+            var inpcount=document.getElementById("myinput").value;
+            
+            for(let i =0;i<inpcount;i++)
+            {
+                var div = document.createElement("div");
+                
+                div.innerHTML = i+1; 
+                document.body.appendChild(div);
+
+            }
+        }
+
+        function click(){
+            var count = document.getElementById("myinput").value;
+            var html='';
+            for(let i =0;i<=count;i++){
+                if(i%2==0){
+                    html+='<div class="evendiv">'+(i+1)+'</div>';
+                }
+                else
+                {
+                    html+='<div class="odddiv">'+(i+1)+'</div>';
+                }
+                document.getElementById("mydiv").innerHTML.appendChild(html);
+
+
+            }
+        }
+        
+
+        </script>
+</body>
+</html>

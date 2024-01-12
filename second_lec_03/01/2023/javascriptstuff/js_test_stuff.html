@@ -1,0 +1,58 @@
+<!--this is for testing the JavaScript-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First JS </title>
+</head>
+<body>
+    
+    <input type="text" id="myinput" placeholder="enter your name here" />
+
+    <input type="button" id ="button" value="click me" onclick="myfunction()" />
+
+    <p>
+        <span id="mytext"></span>
+    </p>
+
+    <!--   desing page to accpeet usesrname and display it on screen once user clikcs on click me  -->
+    <!--   dom document object model  -->
+
+        <script type="text/javascript" >
+         /*
+            var a =55; // compent for javacsript and var for declaring the  variabla
+            var b = 66;
+            
+            console.log(a);
+            console.log(b);
+            console.log(a, b, (a+b));
+            //string concatenation
+            console.log(a + "+"+ b + '=' +(a+b));
+            //string interpolation 
+            console.log(`${a} + ${b} = ${a+b}`); // this is the best way to print the value in console  using the backticks
+            //typeof 
+            console.log(typeof a);
+
+            //== is used to compare the value only and not the data tyeps
+            // === is used to compare the value and the data types
+        */
+        function myfunction(){
+            console.log("Cliked on the button")
+            var myname = document.getElementById("myinput").value;
+            console.log(myname);
+            document.getElementById("myinput").value = ""; 
+            document.getElementById("mytext").innerHTML = '<b>'+myname+'</b>';
+
+
+            
+
+        }
+
+        //desgin page to get roots names form fruits name form frutis name and displa
+
+    
+        </script>
+
+</body>
+</html>

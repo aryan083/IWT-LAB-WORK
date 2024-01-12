@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+
+    Name :- <input type="text" id="name" placeholder="Enter your name">
+    <br>
+    Passwoard :- <input type="password" id="pass" placeholder="Enter your passwoard">
+    <br>
+    <button id="btn" onclick="myfunc()">Submit</button>
+
+    <button id="reset" onclick="reset()">Reset</button>
+
+    <script>
+
+        function reset(){
+            document.getElementById("name").value="";
+            document.getElementById("pass").value="";
+        }
+        function myfunc(){
+
+            var name=document.getElementById("name").value;
+            var pass=document.getElementById("pass").value;
+            if(name==""){
+                alert("Please enter your name");
+            }
+            else if(pass==""){
+                alert("Please enter your passwoard");
+            }
+            else if(name==pass){
+                alert("Welcome "+name+" login sucessfully");
+            }
+            else{
+                alert("Invalid passwoard");
+            }
+
+        }
+
+    </script>
+
+    <script></script>
+</body>
+</html>

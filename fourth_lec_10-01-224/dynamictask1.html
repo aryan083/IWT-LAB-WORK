@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .card{
+            height: 200px;
+            width: auto;
+            
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+        }
+        .product_title{
+            font-size: 50;
+            font-weight: bold;
+            color: red;
+            text-overflow: clip;
+        }
+        .product_description{
+            font-size: 20;
+            font-weight: bold;
+            color: blue;
+        }
+
+        .offerd_price{
+            font-size: 20;
+            font-weight: bold;
+            color: green;
+            display: inline-block;
+            
+        }
+        .charged_price{
+            font-size: 20;
+            font-weight: bold;
+            color: rgb(252, 2, 2);
+            display: inline-block;
+            text-decoration: line-through;
+        }
+        
+    </style>
+
+</head> 
+<body>
+    <div id ="dabo"></div>
+
+
+    <script>
+        //display fruits cards based on given data 
+
+        var fruits =[{
+            name:'patato',
+            description:'this is a patato',
+            offerd_price: 100,
+            charged_price: 200,
+            image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMtVgGeZ8z1OgFyWgYudYhbRhmKYcs2NS0Pw&usqp=CAU'
+        },
+        {
+            name:'tamato',
+            description:'this is a banana',
+            offerd_price: 100,
+            charged_price: 200,
+            image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjrn0ltv-pxvpLgTeYDW6TXtgNPsbRGlVLggin_BD9-coNORxw4sBPoGW1OiYFGfSb_hI&usqp=CAU'
+        },
+        {
+            name:'mango',
+            description:'this is mango',
+            offerd_price: 100,
+            charged_price: 200,
+            image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHe6vVCxFlum_PpnQfSctt1O9HVawHHl9RHw&usqp=CAU'
+        },
+        {
+            name:'orange',
+            description:'this is an orange',
+            offerd_price: 100,
+            charged_price: 200,
+            image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMtVgGeZ8z1OgFyWgYudYhbRhmKYcs2NS0Pw&usqp=CAU'
+        }]
+
+        var container=''
+
+        fruits.forEach(function(fruit){ //same as fruit=>{logic} this is a arrow function and ananymous function 
+            container+='<div class="card">'+
+                '<img src="'+fruit.image+'" alt="ERROR 404 image not found">'+
+                '<div class="product_title" >'+fruit.name +'</div>'+
+                '<div class="product_description">'+fruit.description+'</div> '+
+                '<div>'+
+                '<div class="offerd_price">'+fruit.offerd_price+'</div>'+
+                    '<div class="charged_price"">'+fruit.charged_price+'</div>' +
+                '</div>'+
+            '</div>+'; 
+        })
+
+        //for( let i =0;i<fruits.length;i++){
+        //    container+='<div class="card">'+
+        //        '<img src="'+fruits[i].image+'" alt="ERROR 404 image not found">'+
+        //        '<div class="product_title" >'+fruits[i].name +'</div>'+
+        //        '<div class="product_description">'+fruits[i].description+'</div> '+
+        //        '<div>'+
+        //        '<div class="offerd_price">'+fruits[i].offerd_price+'</div>'+
+        //            '<div class="charged_price"">'+fruits[i].charged_price+'</div>' +
+        //        '</div>'+
+        //    '</div>+';
+        //}
+        document.getElementById("dabo").innerHTML=container;
+       //create a web page to add users with attrbuties usename password full name and validate using username and password if ctediatoonals are correct disapy full name or invlaid user also have a to display all users using \
+        //create a HTML page which accepts blocks attributes like title author imange description and will display all posted blogs
+    </script>
+</body>
+</html>
